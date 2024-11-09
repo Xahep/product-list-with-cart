@@ -116,7 +116,7 @@ const Cart = () => {
             </div>
 
             {
-                isOpenCartMobile && <div className='fixed inset-0 flex flex-row items-end bg-black bg-opacity-40 z-10 min-h-screen'>
+                isOpenCartMobile && <div className='fixed inset-0 bg-black bg-opacity-40 z-10 flex justify-center items-end'>
                     <div className='bg-white w-full py-5 space-y-5 p-8 rounded-t-xl'>
                         <button onClick={closeCartMobileModal} className='w-full flex flex-row justify-end'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-7">
