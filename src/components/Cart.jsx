@@ -118,11 +118,13 @@ const Cart = () => {
             {
                 isOpenCartMobile && <div className='fixed inset-0 bg-black bg-opacity-40 z-10 flex justify-center items-end'>
                     <div className='bg-white w-full py-5 space-y-5 p-8 rounded-t-xl'>
-                        <button onClick={closeCartMobileModal} className='w-full flex flex-row justify-end'>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-7">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                            </svg>
-                        </button>
+                        <div className='w-full flex flex-row justify-end'>
+                            <button onClick={closeCartMobileModal} className=''>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-7">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
                         <h3 className='text-red text-xl font-bold'>Your Cart ({quantity()})</h3>
                         <div id='cart-items' className='space-y-4 max-h-72 lg:max-h-96 overflow-y-auto'>
                             {cart.filter(item => item.quantity !== 0).map((product, index) => (
